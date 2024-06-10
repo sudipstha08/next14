@@ -11,8 +11,8 @@ export default function Home() {
   const router = useRouter()
 
 	return (
-		<main className="flex min-h-screen flex-col items-center justify-between p-24">
-			<div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+		<main className="flex  flex-col items-center justify-center p-24 h-[100vh]">
+			<div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 justify-center">
 				<div className="flex justify-end px-4 pt-4">
 					<button
 						id="dropdownButton"

@@ -1,10 +1,14 @@
 "use client"
 
-import React, { useEffect } from 'react'
-import {  signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import React, { useEffect, useState } from 'react'
+import {  signInWithPopup, GoogleAuthProvider, onAuthStateChanged } from "firebase/auth";
 import { auth, authProvider } from '@/lib';
+import { useRouter } from 'next/navigation'
+import { useAuthState } from '@/hooks';
 
 const LoginPage = () => {
+ const {user, isLoading} = useAuthState()
+  const router = useRouter()
 
   const handleGoogleSignIn = () => {
     signInWithPopup(auth, authProvider)
@@ -29,6 +33,10 @@ const LoginPage = () => {
       // ...
     });
   }
+
+    if(user?.uid && !isLoading) {
+      router.push("/")
+    }
 
   return (
     <main>

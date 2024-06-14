@@ -1,9 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useAuthState } from "@/hooks";
 import { signOut } from "@/utils";
-import { useRouter } from "next/navigation";
 
 export default function Home() {
 	const { user } = useAuthState();
@@ -11,6 +12,7 @@ export default function Home() {
 
 	return (
 		<main className="flex  flex-col items-center justify-center p-24 h-[100vh]">
+			<h2 className="text-2xl my-2">This is Home page</h2>
 			<div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 justify-center">
 				<div className="flex justify-end px-4 pt-4">
 					<button
@@ -54,6 +56,7 @@ export default function Home() {
 							Logout
 						</button>
 					</div>
+					<Link className="underline" href={"/marketing"}>Go to Marketing</Link>
 				</div>
 			</div>
 		</main>

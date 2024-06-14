@@ -23,10 +23,6 @@ export default async function TeamsPage({
 }) {
 	const todos = await getData();
 
-	const handleClick = () => {
-
-	}
-
 	return (
 		<section className="overflow-auto">
 			{todos?.map((data: any) => {

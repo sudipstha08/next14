@@ -1,4 +1,9 @@
 export default function Loading() {
 	// You can add any UI inside Loading, including a Skeleton.
-	return <div className="h-[200px] bg-slate-500 text-neutral-100">Loading......</div>
+	return (
+		<button type="button" className="bg-indigo-500 ..." disabled>
+			<svg className="animate-spin h-5 w-5 mr-3 ..." viewBox="0 0 24 24"></svg>
+			Loading...
+		</button>
+	);
 }

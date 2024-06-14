@@ -57,6 +57,7 @@ export default function Home() {
 						</button>
 					</div>
 					<Link className="underline" href={"/marketing"}>Go to Marketing</Link>
+					<Link className="underline" href={"/team"}>Go to Team</Link>
 				</div>
 			</div>
 		</main>
